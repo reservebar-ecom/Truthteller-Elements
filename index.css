@@ -255,7 +255,7 @@ li a {
 }
 
 .play-now-button {
-    display: none;
+    display: none !important;
     background-color: #e47d3a;
     border: none;
     width: 250px;
@@ -313,7 +313,7 @@ li a {
     }
 
     .play-now-button {
-        display: block;
+        display: block !important;
     }
 
     .logo {
