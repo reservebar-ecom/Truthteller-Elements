@@ -1,0 +1,419 @@
+@font-face {
+    font-family: Nickson One;
+    src: url('https://truthteller1839.com/cdn/shop/t/11/assets/nickson.otf?v=159283295609042467061690478686') format("opentype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: 'The Pretender';
+    src: url('https://truthteller1839.com/cdn/shop/t/11/assets/pretender.otf?v=10118652856769438941690478684') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: HGN;
+    src: url('https://truthteller1839.com/cdn/shop/t/11/assets/hgn.ttf?v=69239604201147328831690478685') format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap
+}
+
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    background-color: black;
+}
+
+p {
+    margin-top: 0;
+}
+
+.navbar {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    max-height: 70px;
+    overflow-y: visible;
+    z-index: 99;
+}
+
+.cart-icon {
+    margin: 1.5rem 2rem;
+    cursor: pointer;
+    display: flex;
+}
+
+#liquid__cart__quantity__number {
+    padding-bottom: 4px;
+    color: white;
+    font-family: 'Nickson One';
+    font-weight: lighter;
+    transform: translate(2px, -10px);
+}
+
+.top-section {
+    position: relative;
+    width: 100%;
+    color: white;
+    font-family: 'The Pretender';
+    height: 100%;
+}
+
+.tt-img {
+    object-fit: contain;
+
+    aspect-ratio: auto;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    min-height: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 0;
+    opacity: .9;
+}
+
+.tt-img-mobile {
+    display: none;
+    object-fit: contain;
+
+    aspect-ratio: auto;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    min-height: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 0;
+    opacity: .9;
+}
+
+.logo {
+    height: 165px;
+    width: 165px;
+}
+
+.logo-mobile {
+    height: 165px;
+    width: 165px;
+    display: none;
+}
+
+.top-section .content {
+    padding-top: 6rem;
+    margin-left: 60px;
+    position: absolute;
+    top: 0;
+}
+
+.content h1 {
+    font-size: 100px;
+    font-family: 'The Pretender';
+    letter-spacing: 3px;
+    font-weight: lighter;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+
+.content h2 {
+    font-size: 48px;
+    font-family: 'The Pretender';
+    letter-spacing: 3px;
+    font-weight: lighter;
+    text-transform: uppercase;
+    margin: 0;
+    color: #e57d3c;
+    text-shadow: 2px 2px 2px black;
+    padding-top: 2rem;
+}
+
+.content p {
+    font-size: 36px;
+    font-family: 'Nickson One';
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 1px;
+    max-width: 580px;
+}
+
+#product-element {
+    max-width: 490px;
+    margin-top: .5rem;
+}
+
+.bottom-section {
+    width: 100%;
+    background: url(https://truthteller1839.com/cdn/shop/t/11/assets/TT_Background_Mobile.jpg?v=138073920013584615331690478686);
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: brightness(.4);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bottom-img {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.bottom-section .footer {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+}
+
+.footer h2 {
+    text-align: center;
+    font-size: 34px;
+    font-family: 'Nickson One';
+    margin: 30px 0 0;
+    font-weight: lighter;
+}
+
+.link-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.link {
+    text-transform: uppercase;
+    color: white;
+}
+
+li {
+    list-style-type: none;
+    font-size: 18px;
+    font-family: 'Nickson One';
+    font-weight: lighter;
+    margin: 1rem 3rem;
+    letter-spacing: 1px;
+}
+
+li a {
+    text-decoration: none;
+}
+
+.at-brand {
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Nickson One';
+    margin: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: lighter;
+}
+
+.copyright {
+    margin: 0px;
+    padding: 0px;
+    line-height: 1.25;
+    color: #C9BDA4 !important;
+    font-family: 'HGN' !important;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.rb-img {
+    margin: auto 2rem;
+    height: 25px;
+    width: auto;
+}
+
+.medal {
+    display: none;
+    width: 150px;
+}
+
+.bottom-img {
+    width: 100%;
+    height: auto;
+}
+
+.bottom-img-mobile {
+    width: 100%;
+    height: auto;
+    display: none;
+}
+
+.play-now-button {
+    display: none;
+    background-color: #e47d3a;
+    border: none;
+    width: 250px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    font-family: 'Nickson One';
+    font-size: 25px;
+    margin-top: 2rem;
+}
+
+.play-now-button a {
+    text-decoration: none;
+    color: white;
+}
+
+.content-desktop {
+    display: block;
+}
+
+.content-mobile {
+    display: none;
+}
+
+@media only screen and (max-width: 767px) {
+
+    .navbar {
+        background-color: transparent;
+        z-index: 999;
+        position: relative;
+    }
+
+    .content-desktop {
+        display: none !important;
+    }
+
+    .content-mobile {
+        display: block !important;
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        color: white;
+        margin-top: -70px !important;
+    }
+
+    .content-mobile p {
+        margin-left: 3rem !important;
+        margin-right: 3rem !important;
+    }
+
+    .top-section {
+        margin-top: -70px;
+    }
+
+    .play-now-button {
+        display: block;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .logo-mobile {
+        display: block;
+        margin-bottom: 1rem;
+    }
+
+    .content {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content h1 {
+        font-size: 48px;
+        text-align: center;
+    }
+
+    .content h2 {
+        font-size: 36px;
+        text-align: center;
+        padding-top: 1rem !important;
+    }
+
+    .content p {
+        font-size: 20px;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .tt-img {
+        display: none;
+    }
+
+
+    .tt-img-mobile {
+        display: block;
+    }
+
+
+    .rb-img {
+        margin: auto .5rem;
+    }
+
+    .link-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        margin-top: 2rem;
+    }
+
+    #product-element {
+        max-width: calc(100% - 2rem);
+        height: 390px;
+        margin-bottom: 1rem !important;
+        margin-top: 1rem !important;
+    }
+
+    .link {
+        margin: .5rem;
+    }
+
+    .copyright {
+        text-align: center;
+    }
+
+    .medal {
+        display: block;
+        margin-top: 2rem;
+    }
+
+    .bottom-img-mobile {
+        display: block;
+    }
+
+    .bottom-img {
+        display: none;
+    }
+
+    li {
+        margin: .5rem;
+    }
+
+    .copyright {
+        margin: .5rem 1rem;
+    }
+
+    .footer {
+        margin-bottom: .5rem;
+    }
+
+    #product-element {
+        margin: 0 1rem;
+    }
+}
