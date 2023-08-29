@@ -77,7 +77,9 @@
             <h2>
                 Buy Now
             </h2>
-            <div class="product-element-mobile"></div>
+            <div class="product-element-mobile-wrapper">
+                <div class="product-element-mobile"></div>
+            </div>
         </div>
 
         <img class="bottom-img"
@@ -134,7 +136,7 @@
             const productElementMobile = document.querySelector('.product-element-mobile');
 
 
-            if (window.innerWidth > 767) {
+            if (window.innerWidth > 992) {
                 if (!productElementDesktop.getAttribute('id')) {
                     productElementMobile.removeAttribute('id');
                     productElementDesktop.setAttribute('id', 'product-element');

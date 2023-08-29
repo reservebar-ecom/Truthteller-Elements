@@ -67,8 +67,7 @@ p {
 }
 
 .tt-img {
-    object-fit: contain;
-
+    min-height: 675px;
     aspect-ratio: auto;
     top: 0;
     left: 0;
@@ -81,6 +80,7 @@ p {
     background-position: center;
     padding: 0;
     opacity: .9;
+    filter: brightness(.6);
 }
 
 .tt-img-mobile {
@@ -113,7 +113,7 @@ p {
 }
 
 .top-section .content {
-    padding-top: 6rem;
+    padding-top: 4rem;
     margin-left: 60px;
     position: absolute;
     top: 0;
@@ -153,9 +153,12 @@ p {
 #product-element {
     max-width: 490px;
     margin-top: .5rem;
+    z-index: 99;
+    position: relative;
 }
 
 .bottom-section {
+    margin-top: -10px;
     width: 100%;
     background: url(./assets/img/TT_Background_Mobile.webp);
     background-repeat: no-repeat;
@@ -282,7 +285,16 @@ li a {
     display: none;
 }
 
-@media only screen and (max-width: 767px) {
+.product-element-mobile-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.product-element-mobile {
+    max-width: 600px;
+}
+
+@media only screen and (max-width: 992px) {
 
     .navbar {
         background-color: transparent;
