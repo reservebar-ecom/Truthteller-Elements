@@ -7,6 +7,22 @@
 }
 
 @font-face {
+    font-family: Nickson;
+    src: url('./assets/fonts/nickson.otf') format("opentype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: Bergen;
+    src: url('./assets/fonts/bergen.otf') format("opentype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
     font-family: 'The Pretender';
     src: url('./assets/fonts/pretender.otf') format('opentype');
     font-weight: normal;
@@ -22,12 +38,150 @@
     font-display: swap
 }
 
+@font-face {
+    font-family: Engravers;
+    src: url('./assets/fonts/engraversgothicbt-heavy.ttf') format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap
+}
 
 html,
 body {
     padding: 0;
     margin: 0;
     background-color: black;
+}
+
+#age-gate-wrapper {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+}
+
+.age-gate-backdrop {
+    backdrop-filter: blur(2px) brightness(60%);
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.age-gate-border {
+    z-index: 9999;
+    width: 80vh;
+    height: 80vh;
+}
+
+.tt-logo {
+    width: 20vh;
+}
+
+.age-gate-circle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.age-gate-circle {
+    z-index: 99999;
+}
+
+.age-gate-circle h2 {
+    color: #AB5C36;
+    font-family: 'Engravers';
+    font-size: 32px;
+    max-width: 380px;
+    text-align: center;
+}
+
+.age-gate-circle p {
+    text-align: center;
+    font-family: 'Engravers';
+    color: #231F20;
+    text-transform: uppercase;
+}
+
+.age-gate-circle p small {
+    max-width: 240px;
+}
+
+.age-inputs {
+    display: flex;
+}
+
+.age-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: .25rem;
+}
+
+.age-input label {
+    font-family: 'Bergen';
+    font-size: 14px;
+    line-height: 1.5;
+    letter-spacing: 0.7px;
+    text-align: center;
+}
+
+.age-input input {
+    border: 2px solid #AB5C36;
+    border-radius: 0;
+    padding: .5rem;
+    text-align: center;
+    font-family: 'Nickson One';
+    font-size: 32px;
+    letter-spacing: 3.2px;
+    max-width: 6rem;
+}
+
+.age-comment {
+    max-width: 215px;
+    text-align: center;
+    font-family: 'HGN';
+    letter-spacing: 0.24px;
+    line-height: 1.25;
+    font-size: 12px;
+    color: #000000;
+    text-transform: uppercase;
+    margin-top: 1rem;
+}
+
+.age-comment-mobile {
+    display: none;
+    max-width: 180px;
+    text-align: center;
+    font-family: 'HGN';
+    letter-spacing: 0.24px;
+    line-height: 1.25;
+    font-size: 12px;
+    color: #000000;
+    text-transform: uppercase;
+    margin-top: 1rem;
+}
+
+#confirm-age {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #E47D3A;
+    width: 268px;
+    height: 72px;
+    color: #fff;
+    border: none;
+    font-family: 'Nickson';
+    font-size: 24px;
+    letter-spacing: 2.4px;
+    margin-top: 1rem;
+    cursor: pointer;
 }
 
 p {
@@ -58,6 +212,19 @@ p {
     transform: translate(2px, -10px);
 }
 
+
+.age-gate-border-wrapper {
+    width: 80vh;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 50%;
+    z-index: 9999;
+    position: absolute;
+}
+
 .top-section {
     position: relative;
     width: 100%;
@@ -80,7 +247,7 @@ p {
     background-position: center;
     padding: 0;
     opacity: .9;
-    filter: brightness(.6);
+    filter: brightness(.8);
 }
 
 .tt-img-mobile {
@@ -294,7 +461,41 @@ li a {
     max-width: 600px;
 }
 
+@media only screen and (max-width: 767px) {
+
+
+    .age-comment {
+        display: none;
+    }
+
+    .age-comment-mobile {
+        display: block;
+        margin-top: 2px;
+    }
+
+    .age-gate-circle h2 {
+        margin-top: 14rem;
+        font-size: 24px;
+        max-width: 280px;
+    }
+
+    .tt-logo {
+        display: none;
+    }
+
+    #order-now {
+        margin-top: 6rem;
+    }
+
+    .age-gate-border-wrapper,
+    .age-gate-border {
+        width: calc(100vw - 1rem);
+        height: calc(100vw - 1rem);
+    }
+}
+
 @media only screen and (max-width: 992px) {
+
 
     .navbar {
         background-color: transparent;

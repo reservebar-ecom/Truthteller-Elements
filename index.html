@@ -5,20 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./index.css">
+    <link rel="icon" type="image/x-icon" href="./assets/img/favicon.png">
     <script id="liquidScriptConfigs" data-liquid-element-id="#product-element"
         data-liquid-token="U2FsdGVkX1+i3il9UdZFDEgJ6BRxxHgOMt4J8zoW5be99QeJWxeocrxXHosjzfUPpFrOsmj+5vwwPMiP348GYXadE6iN5Jnf4brpwRVHZIhH+aDAGn0zweeCgtEjwDzkucmdkc3ZRvsVZfIQO3dVa8/xvj2wAihnOUJwmpXoKtaeGlDuHx4i9huSaThkN9BrjtjVVpGcmtVSzvyya4Z5mZ+HOTMGI8ILTBj6is5qO44="
         data-liquid-product="GROUPING-1908225" type="text/javascript"
         src="https://elements-sdk.liquidcloud.app/liquid-elements.js"></script>
-    <title>Document</title>
+    <title>Truthteller 1839</title>
 </head>
 
 <body>
     <section style="z-index: 99;">
         <div class="navbar">
-            <img class="rb-img"
-                src="./assets/img/Reservebar_logo.webp">
-            <img class="logo" style="z-index: 10;"
-                src="./assets/img/Truthteller1839.webp">
+            <img class="rb-img" src="./assets/img/Reservebar_logo.webp">
+            <img class="logo" style="z-index: 10;" src="./assets/img/Truthteller1839.webp">
             <div class="cart-icon" onclick="toggleLiquidCart()">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffffff" class="bi bi-cart3"
                     viewBox="0 0 16 16">
@@ -31,10 +30,8 @@
         </div>
     </section>
     <section class="top-section">
-        <img class="tt-img"
-            src="./assets/img/bg.webp">
-        <img class="tt-img-mobile"
-            src="./assets/img/TT-Mobile.webp">
+        <img class="tt-img" src="./assets/img/bg.webp">
+        <img class="tt-img-mobile" src="./assets/img/TT-Mobile.webp">
 
         <div class="content content-desktop">
             <p>
@@ -47,8 +44,7 @@
                 A DOUBLE-BARRELED BOURBON CRAFTED FOR those with a story to tell. Inspired by the new FOX TV series,
                 Monarch.
             </p>
-            <img class="medal"
-                src="./assets/img/NYISC_2022_Gold.webp">
+            <img class="medal" src="./assets/img/NYISC_2022_Gold.webp">
             <h2>
                 Buy Now
             </h2>
@@ -56,11 +52,8 @@
         </div>
     </section>
     <section class="bottom-section">
-
-
         <div class="content content-mobile">
-            <img class="logo-mobile" style="z-index: 10;"
-                src="assets/img/Truthteller1839.webp">
+            <img class="logo-mobile" style="z-index: 10;" src="assets/img/Truthteller1839.webp">
             <p>
                 TEXAS STRAIGHT BOURBON WHISKEY
             </p>
@@ -72,8 +65,7 @@
                 Monarch.
             </p>
 
-            <img class="medal"
-                src="./assets/img/NYISC_2022_Gold.webp">
+            <img class="medal" src="./assets/img/NYISC_2022_Gold.webp">
             <h2>
                 Buy Now
             </h2>
@@ -82,11 +74,8 @@
             </div>
         </div>
 
-        <img class="bottom-img"
-            src="./assets/img/Truthteller_AR_Desktop.webp"
-            width="100%" height="auto">
-        <img class="bottom-img-mobile"
-            src="./assets/img/Truthteller_AR_Mobile.webp" />
+        <img class="bottom-img" src="./assets/img/Truthteller_AR_Desktop.webp" width="100%" height="auto">
+        <img class="bottom-img-mobile" src="./assets/img/Truthteller_AR_Mobile.webp" />
         <button class="play-now-button">
             <a href="https://www.instagram.com/ar/1871996973138275/">Play Now</a>
         </button>
@@ -129,6 +118,46 @@
             </p>
         </div>
     </section>
+    <div id="age-gate-wrapper">
+        <div class="age-gate-backdrop"></div>
+        <div class="age-gate-border-wrapper">
+            <img class="age-gate-border" src="./assets/img/agegate-border.svg" />
+        </div>
+        <div class="age-gate-circle">
+            <img class="tt-logo" src="./assets/img/tt-logo.svg" />
+            <h2>
+                ARE YOU OF LEGAL DRINKING AGE?
+            </h2>
+            <p>
+                CONFIRM YOUR BIRTH DATE
+            </p>
+            <div class="age-inputs">
+                <div class="age-input">
+                    <label>Month</label>
+                    <input id="age-month" type="number" min="1" max="31" step="1" value="01" />
+                </div>
+                <div class="age-input">
+                    <label>Day</label>
+                    <input id="age-day" type="number" min="1" max="31" step="1" value="01" />
+                </div>
+                <div class="age-input">
+                    <label>Year</label>
+                    <input id="age-year" type="number" min="1900" max="2050" step="1" value="2023" />
+                </div>
+            </div>
+            <p class="age-comment-mobile">
+                <small>
+                    BY ENTERING THIS SITE YOU ARE AGREEING TO THE TERMS OF USE AND PRIVACY POLICY.
+                </small>
+            </p>
+            <button id="confirm-age">Confirm Age</button>
+            <p class="age-comment">
+                <small>
+                    BY ENTERING THIS SITE YOU ARE AGREEING TO THE TERMS OF USE AND PRIVACY POLICY.
+                </small>
+            </p>
+        </div>
+    </div>
     <script>
 
         const alocateElements = () => {
@@ -161,6 +190,36 @@
         window.addEventListener('resize', function (event) {
             alocateElements();
         }, true);
+    </script>
+    <script>
+        let isLegalAge = JSON.parse(window.localStorage.getItem("_isLegalAge"));
+        const ageGateWrapper = document.querySelector('#age-gate-wrapper');
+        const confirmAge = document.querySelector('#confirm-age');
+
+        if(!isLegalAge) {
+            ageGateWrapper.style.zIndex = '9999';
+        }
+
+        const verifyAge = () => {
+            const bornDate = (new Date(`
+                ${document.querySelector('#age-year').value}-${document.querySelector('#age-month').value}-${document.querySelector('#age-day').value}
+            `)).getTime();
+            let currentDate = (new Date()).getTime();
+            let diff = currentDate - bornDate;
+            let years = diff / ( 1000 * 60 * 60 * 24 * 365.25);
+            return years >= 21;
+        }
+
+        confirmAge.onclick = () => {
+            isLegalAge =  verifyAge();
+            if(isLegalAge){
+                window.localStorage.setItem("_isLegalAge",JSON.stringify(true));
+                ageGateWrapper.style.zIndex = '-1';
+            } else {
+                alert('User is under legal age')
+            }
+        }
+
     </script>
 </body>
 
